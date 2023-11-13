@@ -1,3 +1,7 @@
 from django.shortcuts import render
+def enjoying(request):
 
-# Create your views here.
+    return render(
+        request,
+        'landing/Enjoying.html',
+    )
