@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'landing',
     'community',
     'level',
+    'single_pages',
 ]
 
 MIDDLEWARE = [

@@ -10,3 +10,14 @@ def joiner(request):
             'subjects': subjects,
         }
     )
+
+def single_post_page(request, pk):
+    subject = Subject.objects.get(pk=pk)
+
+    return render(
+        request,
+        'single_pages/상품상세.html',
+        {
+            'subject': subject,
+        }
+    )
