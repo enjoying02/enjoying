@@ -22,5 +22,5 @@ urlpatterns = [
     path('community/', include('community.urls')),
     path('landing/', include('landing.urls')),
     path('', include('landing.urls')),
-    path('level/', include('level.urls'))
+    path('level/', include('level.urls')),
 ]

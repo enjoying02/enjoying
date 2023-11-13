@@ -8,3 +8,6 @@ class Subject(models.Model):
 
     def __str__(self):
         return f'[{self.pk}]{self.title}'
+
+    def get_absolute_url(self):
+        return f'/level/{self.pk}/'

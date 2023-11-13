@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Subject
 def joiner(request):
-    subjects = Subject.objects.all()
+    subjects = Subject.objects.all().order_by('-pk')
 
     return render(
         request,
