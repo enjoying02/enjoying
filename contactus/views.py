@@ -1,3 +1,7 @@
 from django.shortcuts import render
+def contact_us(request):
 
-# Create your views here.
+    return render(
+        request,
+        'contactus/contact.html',
+    )

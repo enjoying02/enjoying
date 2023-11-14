@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'community',
     'level',
     'single_pages',
+    'contactus',
 ]
 
 MIDDLEWARE = [
