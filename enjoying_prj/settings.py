@@ -33,6 +33,8 @@ INSTALLED_APPS = [
     'level',
     'single_pages',
     'contactus',
+    'django_extensions',
+
 ]
 
 MIDDLEWARE = [
