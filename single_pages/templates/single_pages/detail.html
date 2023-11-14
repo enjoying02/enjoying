@@ -113,11 +113,17 @@
 						</div>
 					</div>
 
+
 					<div class="col-lg-5">
 						<div class="img-wrap">
-							<img src="{% static 'level/images/whycu.jpg' %}" alt="Image" class="img-fluid">
+							{% if subject.head_image %}
+							<img src="{{ subject.head_image.url }}" alt="{{ subject.title }} head_image" class="img-fluid">
+							{% else %}
+							<img src="https://picsum.photos/seed/{{ subject.id }}/1920/1080" alt="random_image" class="img-fluid">
+							{% endif %}
 						</div>
 					</div>
+
 
 				</div>
 			</div>

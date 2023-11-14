@@ -90,11 +90,13 @@
 
 		      		<!-- Start Column 1 -->
 					{% for s in subjects %}
-
-
 					<div class="col-12 col-md-4 col-lg-3 mb-5">
 						<a class="product-item" href="{{ s.get_absolute_url }}">
-							<img src="{{ s.head_image.url }}" class="img-fluid product-thumbnail">
+							{% if s.head_image %}
+							<img src="{{ s.head_image.url }}" alt="{{ s }} head im-age" class="img-fluid product-thumbnail">
+							{% else %}
+							<img src="https://picsum.photos/seed/{{ s.id }}/1920/1080" alt="random_image" class="img-fluid product-thumbnail">
+							{% endif %}
 							<h3 class="product-title">{{ s.title }}</h3>
 							<strong class="product-price">{{ s.price | intcomma }}</strong>
 
