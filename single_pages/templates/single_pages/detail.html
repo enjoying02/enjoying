@@ -132,6 +132,14 @@
 		<!-- 상세페이지 끝 -->
 
 
+		<!-- 다운로드버튼 만들기 -->
+		{% if subject.file_upload %}
+		<div class="container">
+			<a href="{{ subject.file_upload.url }}" class="btn btn-outline-secondary" role="button" download>강의 자료 다운로드</a>
+		</div>
+		{% endif %}
+		<!-- 다운로드버튼 만들기 끝 -->
+
 		<!-- Start Footer Section -->
 		<footer class="footer-section">
 			<div class="container relative">
@@ -222,7 +230,7 @@
 		</footer>
 		<!-- End Footer Section -->
 
-
+		<script src="https://kit.fontawesome.com/265522c3c7.js" crossorigin="anonymous"></script>
 		<script src="{% static 'level/js/bootstrap.bundle.min.js' %}"></script>
 		<script src="{% static 'level/js/tiny-slider.js' %}"></script>
 		<script src="{% static 'level/js/custom.js' %}"></script>
