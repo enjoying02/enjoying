@@ -16,7 +16,7 @@ def single_post_page(request, pk):
 
     return render(
         request,
-        'single_pages/상품상세.html',
+        'single_pages/detail.html',
         {
             'subject': subject,
         }

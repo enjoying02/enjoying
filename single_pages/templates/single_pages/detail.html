@@ -61,13 +61,13 @@
 
 
 		<!-- 상세페이지 시작 -->
-		{% for s in subject %}
+
 		<div class="why-choose-section">
 			<div class="container">
 				<div class="row justify-content-between">
 					<div class="col-lg-6">
-						<h2 class="section-title">Enjoying만의 장점</h2>
-						<p>다른 강의 사이트에서는 볼 수 없는 Enjoying만의 장점입니다</p>
+						<h2 class="section-title">{{ subject.title }}</h2>
+						<p>{{ subject.content }}</p>
 
 						<div class="row my-5">
 							<div class="col-6 col-md-6">
@@ -122,7 +122,7 @@
 				</div>
 			</div>
 		</div>
-		{% endfor %}
+
 		<!-- 상세페이지 끝 -->
 
 
