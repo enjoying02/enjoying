@@ -43,9 +43,9 @@
 							<a class="nav-link" href="/landing/">Home</a>
 						</li>
 						<li><a class="nav-link" href="/level/">Joiner</a></li>
-						<li><a class="nav-link" href="beginner.html">Beginner</a></li>
-						<li><a class="nav-link" href="pro.html">Professional</a></li>
-						<li><a class="nav-link" href="/community/">Friends</a></li>
+						<li><a class="nav-link" href="/level/beginner/">Beginner</a></li>
+						<li><a class="nav-link" href="/level/pro/">Professional</a></li>
+						<li><a class="nav-link" href="/level/friends/">Friends</a></li>
 						<li><a class="nav-link" href="/contactus/">Contact us</a></li>
 					</ul>
 
@@ -81,34 +81,7 @@
 			</div>
 		<!-- End Hero Section -->
 
-		<!-- 추천 클래스 시작 -->
-		<div class="product-section">
-			<div class="container">
-				<div class="row">
 
-					<!-- Start Column 1 -->
-
-					<!-- End Column 1 -->
-					{% for s in subjects %}
-					<div class="col-12 col-md-4 col-lg-3 mb-5">
-						<a class="product-item" href="#">
-							<img src="images/001.png" class="img-fluid product-thumbnail">
-							<h3 class="product-title">{{ s.title }}</h3>
-							<strong class="product-price">{{ s.price }}</strong>
-
-							<span class="icon-cross">
-								<img src="images/cross.svg" class="img-fluid">
-							</span>
-						</a>
-					</div>
-					{% endfor %}
-					<!-- End Column 1 -->
-
-
-				</div>
-			</div>
-		</div>
-		<!-- 추천 클래스 끝 -->
 
 		<!-- 차별점 시작 -->
 		<div class="why-choose-section">
@@ -276,58 +249,7 @@
 		<!-- 클래스 소개 끝 -->
 
 		<!-- 친구찾기 시작 -->
-		<div class="blog-section">
-			<div class="container">
-				<div class="row mb-5">
-					<div class="col-md-6">
-						<h2 class="section-title">서울에서 함께할 친구 찾기</h2>
-					</div>
-					<div class="col-md-6 text-start text-md-end">
-						<a href="friends.html" class="more">모든 지역에서 친구 찾기</a>
-					</div>
-				</div>
 
-				<div class="row">
-
-					<div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
-						<div class="post-entry">
-							<a href="#" class="post-thumbnail"><img src="images/post-1.jpg" alt="Image" class="img-fluid"></a>
-							<div class="post-content-entry">
-								<h3><a href="#">직장인 밴드모음</a></h3>
-								<div class="meta">
-									<span>by <a href="#">Kristin Watson</a></span> <span>on <a href="#">Dec 19, 2021</a></span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
-						<div class="post-entry">
-							<a href="#" class="post-thumbnail"><img src="images/post-2.jpg" alt="Image" class="img-fluid"></a>
-							<div class="post-content-entry">
-								<h3><a href="#">How To Keep Your Furniture Clean</a></h3>
-								<div class="meta">
-									<span>by <a href="#">Robert Fox</a></span> <span>on <a href="#">Dec 15, 2021</a></span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
-						<div class="post-entry">
-							<a href="#" class="post-thumbnail"><img src="images/post-3.jpg" alt="Image" class="img-fluid"></a>
-							<div class="post-content-entry">
-								<h3><a href="#">Small Space Furniture Apartment Ideas</a></h3>
-								<div class="meta">
-									<span>by <a href="#">Kristin Watson</a></span> <span>on <a href="#">Dec 12, 2021</a></span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
 		<!-- 친구찾기 끝 -->
 
 		<!-- Start Footer Section -->

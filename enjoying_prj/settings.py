@@ -29,7 +29,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     'landing',
-    'community',
     'level',
     'single_pages',
     'contactus',

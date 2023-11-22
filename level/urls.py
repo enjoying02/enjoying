@@ -25,4 +25,7 @@ from . import views
 urlpatterns = [
     path('<int:pk>/', views.single_post_page),
     path('', views.joiner),
+    path('beginner/', views.beginner),
+    path('pro/', views.pro),
+    path('friends/', views.friends),
 ]
