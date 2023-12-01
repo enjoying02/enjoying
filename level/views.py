@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Subject, Category
+from django.views.generic import CreateView
 
 def joiner(request):
     category = Category.objects.get(slug='joiner')
@@ -40,7 +41,9 @@ def pro(request):
         }
     )
 
-
+class PostCreate(CreateView):
+     model = Subject
+     fields = ['title', 'price', 'content', 'head_image', 'file_upload', 'author', 'category']
 
 def friends(request):
     category = Category.objects.get(slug='friends')

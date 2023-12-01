@@ -33,6 +33,8 @@ INSTALLED_APPS = [
     'single_pages',
     'contactus',
     'django_extensions',
+    'crispy_forms',
+    'crispy_bootstrap4',
 
 ]
 
@@ -118,3 +120,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

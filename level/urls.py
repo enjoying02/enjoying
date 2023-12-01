@@ -14,6 +14,8 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
+
 from django.contrib import admin
 from django.urls import path
 from . import views
@@ -21,8 +23,10 @@ from . import views
 from django.contrib import admin
 from django.urls import path
 from . import views
+
 
 urlpatterns = [
+    path('create_Subject/', views.PostCreate.as_view()),
     path('<int:pk>/', views.single_post_page),
     path('', views.joiner),
     path('beginner/', views.beginner),
