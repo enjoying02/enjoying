@@ -22,10 +22,11 @@
 		<title>Enjoying</title>
 
 	</head>
-
 	<body>
 
 		<!-- Start Header/Navigation -->
+		{% load socialaccount %}
+
 		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" aria-label="Enjoying navigation bar">
 
 			<div class="container">
@@ -50,6 +51,24 @@
 
 					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
 
+						<ul class="navbar-nav ml-auto">
+                    {% if user.is_authenticated %}
+                        <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      {{ user.username | upper }}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="/accounts/logout">Log Out</a>
+                    </div>
+                  </li>
+                    {% else %}
+                        <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">
+                        Log in</a>
+                  </li>
+                    {% endif %}
+                </ul>
+
 						<!-- Button trigger modal -->
 
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">
@@ -58,6 +77,7 @@
 						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
 						cart
 						</button>
+
 						<!-- Model -->
 						<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -72,9 +92,9 @@
 						<div class="modal-body">
 							<div class="row">
 							<div class="col -md-6">
-							<button type="button" class="btn btn-outline-dark btn-block btn-sm">
-							<i class="fa-brands fa-google"></i>&nbsp;&nbsp;login in with google</button>
-							<button type="button" class="btn btn-outline-dark btn-block btn-sm"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;login in with E-mail</button>
+							<a role="button" class="btn btn-outline-dark btn-block btn-sm" href="{% provider_login_url 'google' %}">
+							<i class="fa-brands fa-google"></i>&nbsp;&nbsp;login google</a>
+							<button type="button" class="btn btn-outline-dark btn-block btn-sm my-3"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;login E-mail</button>
 							</div>
 							<div class="col -md-6">
 							<button type="button" class="btn btn-outline-dark btn-block btn-sm"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;sing up E-mail</button>
@@ -98,6 +118,7 @@
 			</div>
 
 		</nav>
+
 		<!-- End Header/Navigation -->
 
 
@@ -121,6 +142,8 @@
 					</div>
 				</div>
 			</div>
+
+
 		<!-- End Hero Section -->
 
 
