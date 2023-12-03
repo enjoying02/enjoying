@@ -2,6 +2,9 @@ from django.shortcuts import render
 from .models import Subject, Category
 from django.views.generic import CreateView
 
+
+
+
 def joiner(request):
     category = Category.objects.get(slug='joiner')
     subjects = Subject.objects.filter(category=category).order_by('-pk')

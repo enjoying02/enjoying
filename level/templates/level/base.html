@@ -1,8 +1,11 @@
 <!doctype html>
 {% load static %}
 {% load humanize %}
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
+
+
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Enjoying.co">
@@ -34,10 +37,10 @@
 
 				<div class="collapse navbar-collapse" id="navbarsEnjoying">
 					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-						<li class="nav-item ">
+						<li class="nav-item">
 							<a class="nav-link" href="/landing/">Home</a>
 						</li>
-						
+
 						<li class="active"><a class="nav-link" href="/level/">Joiner</a></li>
 						<li><a class="nav-link" href="/level/beginner/">Beginner</a></li>
 						<li><a class="nav-link" href="/level/pro/">Professional</a></li>
@@ -46,14 +49,59 @@
 					</ul>
 
 					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-						<li><a class="nav-link" href="#"><img src="{% static 'level/images/user.svg' %}"></a></li>
-						<li><a class="nav-link" href="cart.html"><img src="{% static 'level/images/cart.svg' %}"></a></li>
+
+						<!-- Button trigger modal -->
+
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">
+						login
+						</button>
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+						cart
+						</button>
+						<!-- Model -->
+						<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+        				<div class="modal-header">
+						  <h5 class="modal-title" id="loginModalLabel"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;login</h5>
+						  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						  </button>
+						</div>
+
+						<div class="modal-body">
+							<div class="row">
+							<div class="col -md-6">
+							<button type="button" class="btn btn-outline-dark btn-block btn-sm">
+							<i class="fa-brands fa-google"></i>&nbsp;&nbsp;login in with google</button>
+							<button type="button" class="btn btn-outline-dark btn-block btn-sm"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;login in with E-mail</button>
+							</div>
+							<div class="col -md-6">
+							<button type="button" class="btn btn-outline-dark btn-block btn-sm"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;sing up E-mail</button>
+						</div>
+						</div>
+						</div>
+						<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+						</div>
+					  </div>
+					</div>
+						   </div>
+
+
+
+
+
 					</ul>
 				</div>
 			</div>
 
 		</nav>
 		<!-- End Header/Navigation -->
+
+
+
 
 		<!-- Start Hero Section -->
 			<div class="hero">
@@ -163,7 +211,7 @@
 				<div class="border-top copyright">
 					<div class="row pt-4">
 						<div class="col-lg-6">
-							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a>  Distributed By <a href="https://themewagon.com">ThemeWagon</a> <!-- License information: https://untree.co/license/ --></p>
+							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a>  Distributed By <a href="https://themewagon.com">ThemeWagon</a> <!— License information: https://untree.co/license/ —></p>
 						</div>
 
 						<div class="col-lg-6 text-center text-lg-end">
@@ -178,12 +226,19 @@
 
 			</div>
 		</footer>
-		<!-- End Footer Section -->
+		<!— End Footer Section —>
 
 
 		<script src="{% static 'level/js/bootstrap.bundle.min.js' %}"></script>
 		<script src="{% static 'level/js/tiny-slider.js' %}"></script>
 		<script src="{% static 'level/js/custom.js' %}"></script>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+
+
 	</body>
 
 </html>
